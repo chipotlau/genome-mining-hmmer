@@ -37,7 +37,7 @@ do
 	cd $WKDIR;
 	species=${f%%.*}; #truncate the peptide file name to generate ID used for subsequent directory formation and output file name
 	mkdir $species;
-	hmmsearch -A $species.sto $hmmprofile $f; #saves a multiple alignment of all significant hits
+	hmmsearch -A $species.sto -o $species.out $hmmprofile $f; #saves a multiple alignment of all significant hits, output will be written to $species.out
 	mv $species.sto $species; #moves alignment to specific species folder
 	cd $species;
 	esl-reformat fasta $species.sto > $species.domain.fa; #convert alignment to FASTA format
