@@ -1,6 +1,6 @@
 #!/bin/bash
 
-WKDIR='/home/emily.lau/projects' #set your working directory
+WKDIR='/home/emily.lau/projects/protein/ensembl' #set your working directory
 FILES=$(basename "$WKDIR/*.fa") #grab the name of the files you want to clean up
 
 for f in $FILES
